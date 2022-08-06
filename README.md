@@ -1,5 +1,6 @@
 # Astromatch (tinder inspiration)
 This exercise was proposed by Labenu, an online programming school.
+Data was extracted via API.
 
 ## Functionalities
 * The user can see the main information about the other users: name, age and description;
