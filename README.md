@@ -18,3 +18,6 @@ This exercise was proposed by Labenu, an online programming school.
 [Link surge](https://macabre-bean.surge.sh/)
 
 ## Images
+![Image1](printAstromatch1.png)
+![Image2](printAstromatch2.png)
+![Image3](printAstromatch3.png)
