@@ -18,7 +18,7 @@ export function Matches(props) {
     
     
     return (
-        <ContainerMatches>
+        <section>
             {props.matches.length === 0 && (
             <NoMatches>
                 <p>Você ainda não possui matches.</p>
@@ -26,21 +26,22 @@ export function Matches(props) {
             </NoMatches>)}
             
             {props.matches.length > 0 && (
-                <div>
-                    {props.matches.map((item, index) => {
-                        return (
-                            <CardMatches key={index}>
-                                <img src={item.photo} alt={item.photo_alt}/>
-                                <p>{item.name}</p>
-                            </CardMatches>
-                        )
-                    })}
-                </div>
+                <ContainerMatches>
+                    <section>
+                        {props.matches.map((item, index) => {
+                            return (
+                                <CardMatches key={index}>
+                                    <img src={item.photo} alt={item.photo_alt}/>
+                                    <p>{item.name}</p>
+                                </CardMatches>
+                            )
+                        })}
+                    </section>
+                    <DeleteButton onClick={handleClear}>
+                        <img src={iconDelete} alt={'Ícone de uma lixeira'}/>
+                    </DeleteButton>
+                </ContainerMatches>
             )}
-
-            <DeleteButton onClick={handleClear}>
-                <img src={iconDelete} alt={'Ícone de uma lixeira'}/>
-            </DeleteButton>
-        </ContainerMatches>
+        </section>
     )
 }

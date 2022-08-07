@@ -93,10 +93,10 @@ export const ProfilesSection = styled.section `
     }
     @media screen and (min-width: 420px) and (max-width: 600px) {
         min-height: 75vh;
-        width: 85vw;
+        width: 82vw;
     }
     @media screen and (min-width: 320px) and (max-width: 420px) {
         min-height: 70vh;
-        width: 85vw;
+        width: 80vw;
     }
 `
