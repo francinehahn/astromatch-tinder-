@@ -13,7 +13,7 @@ export function Header(props) {
         props.setShowMatches(true)
 
         axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/francine-hahn-barros/matches').then
-        (response => props.setMatches(response.data.matches)).catch(err => console.log(err))
+        (response => props.setMatches(response.data.matches)).catch(err => alert(`Erro: ${err}`))
     }
 
 
