@@ -12,7 +12,7 @@ export function Matches(props) {
         const conf = confirm('Tem certeza que quer excluir os seus matches?')
         if(conf === true) {
             axios.put('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/francine-hahn-barros/clear').
-            then(alert('Seus matches foram excluidos')).catch(err => console.log(err))
+            then(alert('Seus matches foram excluidos')).catch(err => alert(`Erro: ${err}`))
         }
     }
     
