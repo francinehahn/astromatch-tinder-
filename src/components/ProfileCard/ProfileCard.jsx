@@ -20,7 +20,7 @@ export function ProfileCard() {
             } else {
                 setUser(response.data.profile)
             } 
-        }).catch(err => console.log(err))
+        }).catch(err => alert(`Erro: ${err}`))
     }
 
 
@@ -39,7 +39,7 @@ export function ProfileCard() {
             setIsMatch(false)
             chooseProfile()
         }).
-        catch(err => console.log(err))
+        catch(err => alert(`Erro: ${err}`))
     }
 
 
@@ -58,7 +58,7 @@ export function ProfileCard() {
                 setIsMatch(false)
             }
             chooseProfile()
-        }).catch(err => console.log(err))
+        }).catch(err => alert(`Erro: ${err}`))
     }
 
 
