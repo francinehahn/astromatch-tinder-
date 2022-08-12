@@ -7,7 +7,6 @@ import iconArrow from '../../img/icon-arrow.png'
 
 export function Header(props) {
     
-
     //Pegar a lista de matches
     const handleMatches = () => {
         props.setShowMatches(true)

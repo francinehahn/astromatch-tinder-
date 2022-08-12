@@ -44,8 +44,8 @@ export const HeaderSection = styled.header `
         }
     }
     @media screen and (min-width: 1200px) and (max-width: 1400px) {
-        height: 4vh;
-        gap: 11vw;
+        height: 5vh;
+        gap: 6vw;
         button {
             margin-left: 1vw;
             img {

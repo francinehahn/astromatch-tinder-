@@ -79,9 +79,13 @@ export const ProfilesSection = styled.section `
         min-height: 75vh;
         width: 23vw;
     }
-    @media screen and (min-width: 1000px)  and (max-width: 1400px) {
+    @media screen and (min-width: 1200px)  and (max-width: 1400px) {
         min-height: 70vh;
-        width: 40vw;
+        width: 32vw;
+    }
+    @media screen and (min-width: 1000px)  and (max-width: 1200px) {
+        min-height: 70vh;
+        width: 38vw;
     }
     @media screen and (min-width: 800px) and (max-width: 1000px) {
         min-height: 85vh;
