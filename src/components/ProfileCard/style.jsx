@@ -112,13 +112,13 @@ export const ButtonSection = styled.div `
     @media screen and (min-width: 1400px) {
         margin: 5vh 0 0 0;
         img {
-            width: 3.5vw;
+            width: 3vw;
         }
     }
     @media screen and (min-width: 1200px) and (max-width: 1400px) {
         margin: 5.5vh 0 1vh 0;
         img {
-            width: 4.5vw;
+            width: 4vw;
         }
     }
     @media screen and (min-width: 1000px) and (max-width: 1200px) {
@@ -136,25 +136,25 @@ export const ButtonSection = styled.div `
     @media screen and (min-width: 600px) and (max-width: 800px) {
         margin: 6vh 0 1vh 0;
         img {
-            width: 10vw;
+            width: 8.5vw;
         }
     }
     @media screen and (min-width: 480px) and (max-width: 600px) {
         margin: 6vh 0 1vh 0;
         img {
-            width: 12.5vw;
+            width: 11.5vw;
         }
     }
     @media screen and (min-width: 420px) and (max-width: 480px) {
         margin: 6vh 0 1vh 0;
         img {
-            width: 13vw;
+            width: 12vw;
         }
     }
     @media screen and (min-width: 320px) and (max-width: 420px) {
         margin: 9vh 0 1vh 0;
         img {
-            width: 13.5vw;
+            width: 13vw;
         }
     }
 `

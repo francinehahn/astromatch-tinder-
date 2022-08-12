@@ -75,7 +75,7 @@ export const ProfilesSection = styled.section `
     animation: initialAnimation 3.5s;
 
     @media screen and (min-width: 1400px) {
-        height: 78vh;
+        height: 79vh;
         width: 23vw;
     }
     @media screen and (min-width: 1200px)  and (max-width: 1400px) {
@@ -83,11 +83,11 @@ export const ProfilesSection = styled.section `
         width: 32vw;
     }
     @media screen and (min-width: 1000px)  and (max-width: 1200px) {
-        height: 77vh;
+        height: 80vh;
         width: 35vw;
     }
     @media screen and (min-width: 800px) and (max-width: 1000px) {
-        height: 90vh;
+        height: 91vh;
         width: 50vw;
     }
     @media screen and (min-width: 600px) and (max-width: 800px) {
@@ -98,12 +98,8 @@ export const ProfilesSection = styled.section `
         height: 85vh;
         width: 80vw;
     }
-    @media screen and (min-width: 420px) and (max-width: 480px) {
-        height: 75vh;
-        width: 80vw;
-    }
-    @media screen and (min-width: 320px) and (max-width: 420px) {
-        height: 75vh;
+    @media screen and (min-width: 320px) and (max-width: 480px) {
+        height: 77vh;
         width: 80vw;
     }
 `
