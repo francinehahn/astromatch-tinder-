@@ -162,51 +162,12 @@ export const ButtonSection = styled.div `
 
 export const Loading = styled.img `
     display: block;
-    margin: 26vh auto;
-    width: 25%;
+    margin: 25vh auto 0 auto;
+    width: 20%;
+    
     @keyframes spin {
         from {transform: rotate(0)}
         to {transform: rotate(360deg)}
     }
     animation: spin 1.5s infinite;
-
-    @media screen and (min-width: 1500px) {
-        margin: 26.2vh auto;
-    }
-    @media screen and (min-width: 1400px) and (max-width: 1500px) {
-        margin: 27vh auto;
-    }
-    @media screen and (min-width: 1300px) and (max-width: 1400px) {
-        margin: 25.3vh auto;
-    }
-    @media screen and (min-width: 1200px) and (max-width: 1300px) {
-        margin: 25.5vh auto;
-    }
-    @media screen and (min-width: 1100px) and (max-width: 1200px) {
-        margin: 24.5vh auto;
-    }
-    @media screen and (min-width: 1000px) and (max-width: 1100px) {
-        margin: 25vh auto;
-    }
-    @media screen and (min-width: 900px) and (max-width: 1000px) {
-        margin: 32.5vh auto;
-    }
-    @media screen and (min-width: 800px) and (max-width: 900px) {
-        margin: 32.4vh auto;
-    }
-    @media screen and (min-width: 700px) and (max-width: 800px) {
-        margin: 29.7vh auto;
-    }
-    @media screen and (min-width: 600px) and (max-width: 700px) {
-        margin: 31.7vh auto;
-    }
-    @media screen and (min-width: 500px) and (max-width: 600px) {
-        margin: 29.5vh auto;
-    }
-    @media screen and (min-width: 400px) and (max-width: 500px) {
-        margin: 26.7vh auto;
-    }
-    @media screen and (min-width: 320px) and (max-width: 400px) {
-        margin: 26.6vh auto;
-    }
 `

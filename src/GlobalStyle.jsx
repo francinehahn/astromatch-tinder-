@@ -74,33 +74,38 @@ export const ProfilesSection = styled.section `
 
     animation: initialAnimation 3.5s;
 
-
     @media screen and (min-width: 1400px) {
-        min-height: 75vh;
+        height: 78vh;
         width: 23vw;
     }
     @media screen and (min-width: 1200px)  and (max-width: 1400px) {
-        min-height: 70vh;
+        height: 80vh;
         width: 32vw;
     }
     @media screen and (min-width: 1000px)  and (max-width: 1200px) {
-        min-height: 70vh;
-        width: 38vw;
+        height: 77vh;
+        width: 35vw;
     }
     @media screen and (min-width: 800px) and (max-width: 1000px) {
-        min-height: 85vh;
-        width: 60vw;
+        height: 90vh;
+        width: 50vw;
     }
     @media screen and (min-width: 600px) and (max-width: 800px) {
-        min-height: 85vh;
+        height: 90vh;
+        width: 70vw;
+    }
+    @media screen and (min-width: 480px) and (max-width: 600px) {
+        height: 85vh;
         width: 80vw;
     }
-    @media screen and (min-width: 420px) and (max-width: 600px) {
-        min-height: 75vh;
-        width: 82vw;
+    @media screen and (min-width: 420px) and (max-width: 480px) {
+        height: 75vh;
+        width: 80vw;
     }
     @media screen and (min-width: 320px) and (max-width: 420px) {
-        min-height: 70vh;
+        height: 75vh;
         width: 80vw;
     }
 `
+
+

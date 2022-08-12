@@ -84,17 +84,16 @@ export function ProfileCard() {
                     <h3>{user.name}, {user.age}</h3>
                     <p>{user.bio}</p>
                 </section>
+                <ButtonSection>
+                    <button onClick={handleDeslike}>
+                        <img src={iconx} alt={'Ícone com um x representasndo um deslike'}/>
+                    </button>
+                    <button onClick={handleLike}>
+                        <img src={iconheart} alt={'Ícone com um coração representando um like'}/>
+                    </button>
+                </ButtonSection>
             </>
             )}
-
-            <ButtonSection>
-                <button onClick={handleDeslike}>
-                    <img src={iconx} alt={'Ícone com um x representasndo um deslike'}/>
-                </button>
-                <button onClick={handleLike}>
-                    <img src={iconheart} alt={'Ícone com um coração representando um like'}/>
-                </button>
-            </ButtonSection>
         </Card>
     )
 }

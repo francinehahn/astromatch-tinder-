@@ -27,79 +27,15 @@ export const NoMatches = styled.div `
         }
         animation: beatingHeart .6s ease infinite;
     }
-
-
-    @media screen and (min-width: 1500px) {   
-        min-height: 72vh;
-    }
-    @media screen and (min-width: 1400px) and (max-width: 1500px) {   
-        min-height: 71vh;
-    }
-    @media screen and (min-width: 1300px) and (max-width: 1400px) {   
-        min-height: 73.6vh;
-    }
-    @media screen and (min-width: 1200px) and (max-width: 1300px) {   
-        min-height: 73.8vh;
-    }
-    @media screen and (min-width: 1000px) and (max-width: 1200px) {   
-        min-height: 68vh;
-    }
-    @media screen and (min-width: 800px) and (max-width: 1000px) {   
-        min-height: 80.3vh;
-    }
-    @media screen and (min-width: 650px) and (max-width: 800px) {   
-        min-height: 79.8vh;
-    }
-    @media screen and (min-width: 600px) and (max-width: 650px) {   
-        min-height: 79vh;
-    }
-    @media screen and (min-width: 500px) and (max-width: 600px) {
-        min-height: 75vh;
-    }
-    @media screen and (min-width: 420px) and (max-width: 500px) {
-        min-height: 68vh;
-    }
-    @media screen and (min-width: 390px) and (max-width: 420px) {
-        min-height: 68.6vh;
-    }
-    @media screen and (min-width: 320px) and (max-width: 390px) {
-        min-height: 71.3vh;
-    }
 `
 
 
 export const ContainerMatches = styled.section `
     display: grid;
+    max-height: 70vh;
     grid-template-columns: 70% 30%;
     align-content: flex-start;
-
-    @media screen and (min-width: 1400px) {   
-        min-height: 73vh;
-    }
-    @media screen and (min-width: 1200px) and (max-width: 1400px) {   
-        min-height: 74.6vh;
-    }
-    @media screen and (min-width: 1100px) and (max-width: 1200px) {   
-        min-height: 73.7vh;
-    }
-    @media screen and (min-width: 1000px) and (max-width: 1100px) {   
-        min-height: 73.5vh;
-    }
-    @media screen and (min-width: 800px) and (max-width: 1000px) {   
-        min-height: 81vh;
-    }
-    @media screen and (min-width: 650px) and (max-width: 800px) {   
-        min-height: 82.5vh;
-    }
-    @media screen and (min-width: 500px) and (max-width: 650px) {   
-        min-height: 76vh;
-    }
-    @media screen and (min-width: 400px) and (max-width: 500px) {
-        min-height: 69.9vh;
-    }
-    @media screen and (min-width: 320px) and (max-width: 400px) {
-        min-height: 70vh;
-    }
+    overflow-y: scroll;
 `
 
 export const DeleteButton = styled.button `

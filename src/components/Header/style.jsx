@@ -45,7 +45,7 @@ export const HeaderSection = styled.header `
     }
     @media screen and (min-width: 1200px) and (max-width: 1400px) {
         height: 5vh;
-        gap: 6vw;
+        gap: 7vw;
         button {
             margin-left: 1vw;
             img {
@@ -55,7 +55,7 @@ export const HeaderSection = styled.header `
     }
     @media screen and (min-width: 1000px) and (max-width: 1200px) {
         height: 4vh;
-        gap: 10vw;
+        gap: 7vw;
         button {
             margin-left: 0.5vw;
             img {
@@ -64,8 +64,18 @@ export const HeaderSection = styled.header `
         }
     }
     @media screen and (min-width: 900px) and (max-width: 1000px) {
-        height: 4vh;
-        gap: 17vw;
+        height: 4.5vh;
+        gap: 13vw;
+        button {
+            margin-left: 1vw;
+            img {
+                width: 4.5vw;
+            }
+        }
+    }
+    @media screen and (min-width: 800px) and (max-width: 900px) {
+        height: 4.5vh;
+        gap: 12vw;
         button {
             margin-left: 1vw;
             img {
@@ -73,9 +83,9 @@ export const HeaderSection = styled.header `
             }
         }
     }
-    @media screen and (min-width: 800px) and (max-width: 900px) {
+    @media screen and (min-width: 600px) and (max-width: 800px) {
         height: 4vh;
-        gap: 15vw;
+        gap: 20vw;
         button {
             margin-left: 1vw;
             img {
@@ -83,29 +93,19 @@ export const HeaderSection = styled.header `
             }
         }
     }
-    @media screen and (min-width: 600px) and (max-width: 800px) {
-        height: 4vh;
-        gap: 26vw;
-        button {
-            margin-left: 1vw;
-            img {
-                width: 7vw;
-            }
-        }
-    }
     @media screen and (min-width: 500px) and (max-width: 600px) {
         height: 4vh;
-        gap: 24vw;
+        gap: 20vw;
         button {
             margin-left: 1vw;
             img {
-                width: 8vw;
+                width: 7.5vw;
             }
         }
     }
     @media screen and (min-width: 320px) and (max-width: 500px) {
         height: 3vh;
-        gap: 19vw;
+        gap: 17vw;
         button {
             margin-left: 1vw;
             img {
