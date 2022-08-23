@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {GeneralContainer, ProfilesSection} from './GlobalStyle'
+import {GlobalStyle, GeneralContainer, ProfilesSection} from './GlobalStyle'
 import {Header} from './components/Header/Header'
 import {Matches} from './components/Matches/Matches'
 import {ProfileCard} from './components/ProfileCard/ProfileCard'
@@ -8,13 +8,13 @@ import {ProfileCard} from './components/ProfileCard/ProfileCard'
 function App() {
 
   const [showMatches, setShowMatches] = useState(false)
-  const [matches, setMatches] = useState([])
   
   return (
     <GeneralContainer>
+      <GlobalStyle/>
       <ProfilesSection>
-          <Header showMatches={showMatches} setShowMatches={setShowMatches} setMatches={setMatches}/>
-          {showMatches? <Matches matches={matches}/> : <ProfileCard/>}
+          <Header showMatches={showMatches} setShowMatches={setShowMatches}/>
+          {showMatches? <Matches/> : <ProfileCard/>}
       </ProfilesSection>
     </GeneralContainer>
   )

@@ -1,5 +1,11 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
+export const GlobalStyle = createGlobalStyle `
+    *{
+        padding: 0;
+        margin: 0;
+    }
+`
 
 export const GeneralContainer = styled.section `
     font-family: Arial, Helvetica, sans-serif;

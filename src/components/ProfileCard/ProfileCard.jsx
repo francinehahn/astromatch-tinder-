@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import axios from 'axios'
+import {url} from '../../constants/constants'
+import { useRequestData } from '../../hooks/useRequestData'
 import {Card, Photo, ButtonSection, MatchTitle, Loading} from './style'
 import iconx from '../../img/icon-x.png'
 import iconheart from '../../img/iconheart.png'
@@ -7,52 +9,30 @@ import loading from '../../img/loading.png'
 
 
 export function ProfileCard() {
-
-    const [user, setUser] = useState([])
     const [isMatch, setIsMatch] = useState(false)
-    const [isLoading, setIsLoading] = useState(false)
-
-    //Escolher um novo perfil perfil toda vez que clica no like ou deslike
-    const chooseProfile = () => {
-        setIsLoading(true)
-        axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/francine-hahn-barros/person').then(response => {
-            
-            if(response.data.profile === null) {
-                axios.put(`https://us-central1-missao-newton.cloudfunctions.net/astroMatch/francine-hahn-barros/clear`).then(() => {
-                    setIsLoading(false)
-                    alert('Atenção: Você vizualisou todos os perfis disponíveis e por isso seus matches serão resetados.')
-                }).catch(err => {
-                    setIsLoading(false)
-                    alert(`Houve um erro: ${err}`)
-                })
-            } else {
-                setIsLoading(false)
-                setUser(response.data.profile)
-            } 
-
-        }).catch(err => alert(`Erro: ${err}`))
-    }
-
-
-    useEffect(() => {chooseProfile()}, [])
-   
-    //Dar like ou deslike em um usuário
+    const [user, isLoading, setIsLoading, error, updateData, setUpdateData, request, setRequest] = useRequestData(`${url}person`)
+    
+    //Verificando se há um match
     const choosePerson = (body) => {
-        axios.post('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/francine-hahn-barros/choose-person',
-        body).then(response => {
+        setIsLoading(true)
+        axios.post(`${url}choose-person`, body).then(response => {
+            setIsLoading(false)
             if (response.data.isMatch === true) {
                 setIsMatch(true)
             } else {
                 setIsMatch(false)
             }
-            chooseProfile()
-        }).catch(err => alert(`Erro: ${err}`))
+        }).catch(err => {
+            setIsLoading(false)
+            alert(`Erro: ${err}`)
+        })
+        setRequest(!request)
     }
 
     //Quando usuário clica no deslike
     const handleDeslike = () => {
         const body = {
-            id: user.id,
+            id: user.profile.id,
             choice: false
         }
         choosePerson(body)
@@ -62,7 +42,7 @@ export function ProfileCard() {
     //Quando usuário clica no like
     const handleLike = () => {
         const body = {
-            id: user.id,
+            id: user.profile.id,
             choice: true
         }
         choosePerson(body)
@@ -77,22 +57,29 @@ export function ProfileCard() {
                 <Loading src={loading} alt={'Círculo girando'}/>
             )}
             
-            {!isLoading && user && (
-            <>
-                <Photo src={user.photo} alt={user.photo_alt}/>
-                <section>
-                    <h3>{user.name}, {user.age}</h3>
-                    <p>{user.bio}</p>
-                </section>
-                <ButtonSection>
-                    <button onClick={handleDeslike}>
-                        <img src={iconx} alt={'Ícone com um x representasndo um deslike'}/>
-                    </button>
-                    <button onClick={handleLike}>
-                        <img src={iconheart} alt={'Ícone com um coração representando um like'}/>
-                    </button>
-                </ButtonSection>
-            </>
+            {!isLoading && !error && user.profile && (
+                <>
+                    <Photo src={user.profile.photo} alt={user.profile.photo_alt}/>
+                    <section>
+                        <h3>{user.profile.name}, {user.profile.age}</h3>
+                        <p>{user.profile.bio}</p>
+                    </section>
+                    <ButtonSection>
+                        <button onClick={handleDeslike}>
+                            <img src={iconx} alt={'Ícone com um x representasndo um deslike'}/>
+                        </button>
+                        <button onClick={handleLike}>
+                            <img src={iconheart} alt={'Ícone com um coração representando um like'}/>
+                        </button>
+                    </ButtonSection>
+                </>
+            )}
+
+            {!isLoading && error && (
+                <>
+                    <p>Houve o seguinte erro:</p>
+                    <p>{error}</p>
+                </>
             )}
         </Card>
     )

@@ -1,35 +1,19 @@
 import React from 'react'
-import axios from 'axios'
 import {HeaderSection} from './style'
 import iconPeople from '../../img/match-icon.png'
 import iconArrow from '../../img/icon-arrow.png'
 
 
 export function Header(props) {
-    
-    //Pegar a lista de matches
-    const handleMatches = () => {
-        props.setShowMatches(true)
-
-        axios.get('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/francine-hahn-barros/matches').then
-        (response => props.setMatches(response.data.matches)).catch(err => alert(`Erro: ${err}`))
-    }
-
-
-    //Voltar para a página principal
-    const handlePageChange = () => {
-        props.setShowMatches(false)
-    }
-
 
     return (
         <HeaderSection>
             {props.showMatches? (
-                <button onClick={handlePageChange}>
+                <button onClick={() => props.setShowMatches(false)}>
                     <img src={iconArrow} alt={'ícone de uma seta'}/>
                 </button>
             ) : (
-                <button onClick={handleMatches}>
+                <button onClick={() => props.setShowMatches(true)}>
                     <img src={iconPeople} alt={'ícone de match entre duas pessoas'}/>
                 </button>
             )}

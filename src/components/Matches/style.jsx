@@ -29,7 +29,6 @@ export const NoMatches = styled.div `
     }
 `
 
-
 export const ContainerMatches = styled.section `
     display: grid;
     max-height: 70vh;
@@ -125,4 +124,16 @@ export const CardMatches = styled.section `
             height: 6vh;
         }
     }
+`
+
+export const Loading = styled.img `
+    display: block;
+    margin: 25vh auto 0 auto;
+    width: 20%;
+    
+    @keyframes spin {
+        from {transform: rotate(0)}
+        to {transform: rotate(360deg)}
+    }
+    animation: spin 1.5s infinite;
 `
