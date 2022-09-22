@@ -22,9 +22,7 @@ https://known-zoo.surge.sh/
 
 ## Installing
 <pre>
-  <code>
-    $ git clone https://github.com/francinehahn/astromatch-tinder-.git
-  </code>
+  <code>$ git clone https://github.com/francinehahn/astromatch-tinder-.git</code>
 </pre>
 
 <pre>
