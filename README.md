@@ -18,14 +18,17 @@ Data was extracted via API.
 * React JS
 
 ## Link to access the project
-[Link surge](https://known-zoo.surge.sh/)
+https://known-zoo.surge.sh/
 
 ## Installing
 <pre>
   <code>
     $ git clone https://github.com/francinehahn/astromatch-tinder-.git
-    cd astromatch-tinder-
   </code>
+</pre>
+
+<pre>
+  <code>$ cd astromatch-tinder-</code>
 </pre>
 
 <pre>
