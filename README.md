@@ -20,6 +20,18 @@ Data was extracted via API.
 ## Link to access the project
 [Link surge](https://known-zoo.surge.sh/)
 
+## Installing
+<pre>
+  <code>
+    $ git clone https://github.com/francinehahn/astromatch-tinder-.git
+    cd astromatch-tinder-
+  </code>
+</pre>
+
+<pre>
+  <code>$ npm install</code>
+</pre>
+
 ## Images
 ![Image1](./src/img/printAstromatch1.png)
 ![Image2](./src/img/printAstromatch2.png)
