@@ -6,8 +6,8 @@ Data was extracted via API.
 
 ## Functionalities
 * The user can see the main information about the other users: name, age and description;
-* The user can tap the heart to like the other user or tap de cross to deslike them;
-* When the user likes someone who also like them, they will see the message "It's a match" on the screen;
+* The user can tap the heart icon to like the other user or tap the cross icon to deslike them;
+* When the user likes someone who also like them, they will see the message "It's a match!" on the screen;
 * The user can see the list of matches and also delete it;
 * The project is responsive to all screen sizes.
 
